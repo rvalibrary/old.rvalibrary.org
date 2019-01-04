@@ -1,0 +1,51 @@
+#{$wrap} {
+    &.mega-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99998;
+        opacity: $sticky_menu_opacity;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+
+        @if $sticky_menu_expand == false {
+            background: transparent;
+
+            #{$menu} {
+                @include background($container_background_from, $container_background_to);
+
+                @if $container_background_from != $mobile_background_from {
+                    @include mobile {
+                        @include background($mobile_background_from, $mobile_background_to);
+                    }
+                }
+            }
+        }
+    }
+
+    &.mega-stuck {
+        &.mega-hide {
+            transform: translateY(-100%);
+            -webkit-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+        }
+
+        &.mega-hide.mega-reveal {
+            transform: translateY(0%);
+        }
+    }
+}
+
+#{$wrap}.mega-sticky #{$menu} li.mega-menu-item.mega-hide-when-sticky {
+    display: none;
+}
+#{$wrap} #{$menu} li.mega-menu-item.mega-show-when-sticky {
+    display: none;
+}
+#{$wrap}.mega-sticky #{$menu} li.mega-menu-item.mega-show-when-sticky {
+    display: inline-block;
+}

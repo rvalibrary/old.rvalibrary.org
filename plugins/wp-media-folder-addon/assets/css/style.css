@@ -1,0 +1,830 @@
+@charset "UTF-8";
+
+/* Colors CSS */
+#WpmfGoogleDrive a {
+    color: #666;
+}
+
+#WpmfGoogleDrive .list-container {
+    border-color: #DDD;
+    background-color: #f9f9f9;
+}
+
+#WpmfGoogleDrive .loading {
+    background-color: rgba(249, 249, 249, 0.8);
+}
+
+/* ---Header */
+#WpmfGoogleDrive .nav-header {
+    border-color: #E4E4E4;
+    background: #F9F9F9;
+}
+
+#WpmfGoogleDrive .nav-header a:hover,
+#WpmfGoogleDrive .nextimages a:hover,
+#WpmfGoogleDrive .column_names a:hover {
+    color: #0e92c7;
+}
+
+#WpmfGoogleDrive .nav-search.inuse {
+    color: #29ADE2;
+}
+
+#WpmfGoogleDrive .column_names {
+    background-color: #F1F1EF;
+    border-color: #E4E4E4;
+}
+
+.WpmfGoogleDrive .search-remove:hover {
+    color: #29ADE2;
+}
+
+/* ---File/Pictures entries */
+#WpmfGoogleDrive .entry.hasfocus, #WpmfGoogleDrive .entry.hasfocus a,
+#WpmfGoogleDrive .entry.popupopen, #WpmfGoogleDrive .entry.popupopen a,
+#WpmfGoogleDrive .entry.isselected, #WpmfGoogleDrive .entry.isselected a,
+#WpmfGoogleDrive .entry.isdragged, #WpmfGoogleDrive .entry.isdragged a,
+#WpmfGoogleDrive .entry:hover, #WpmfGoogleDrive .entry:hover a {
+    color: #FFF;
+}
+
+#WpmfGoogleDrive .entry:hover, #WpmfGoogleDrive .entry.hasfocus, #WpmfGoogleDrive .entry.isdragged, #WpmfGoogleDrive .entry.popupopen {
+    background-color: #29ADE2;
+}
+
+#WpmfGoogleDrive .entry.isselected {
+    background-color: #0e92c7;
+}
+
+/* ---Menus*/
+.WpmfGoogleDrive .gear-menu li > a:hover,
+.WpmfGoogleDrive .download-zip-menu li > a:hover,
+.WpmfGoogleDrive .uyd-dropdown-menu li > a:hover {
+    background-color: #0e92c7;
+    color: #FFF;
+}
+
+/* ---Description popup*/
+.qtip-default.WpmfGoogleDrive.description .qtip-content .description_title {
+    background-color: #29ADE2;
+}
+
+/* ---Upload rows */
+#WpmfGoogleDrive .template-upload,
+#WpmfGoogleDrive .template-download {
+    border: 1px solid #EBEBEB;
+    background-color: #EEE;
+}
+
+/* ---Drag & Drop */
+.WpmfGoogleDrive.in {
+    border: 4px dashed #ccc;
+}
+
+.WpmfGoogleDrive.hover {
+    border: 4px dashed #ccc;
+}
+
+/* End Color CSS */
+
+/* Basic layout */
+#WpmfGoogleDrive {
+    font: 1.1em "Open Sans", "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+    line-height: 1.6;
+    color: #666;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#WpmfGoogleDrive div, #WpmfGoogleDrive p, #WpmfGoogleDrive ul, #WpmfGoogleDrive ul {
+    margin: 0;
+    padding: 0;
+}
+
+#WpmfGoogleDrive div, #WpmfGoogleDrive input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#WpmfGoogleDrive a {
+    text-decoration: none;
+    border: 0
+}
+
+#WpmfGoogleDrive a:hover {
+    text-decoration: none;
+}
+
+.WpmfGoogleDrive.jsdisabled,
+#WpmfGoogleDrive .jsdisabled {
+    display: none;
+}
+
+#WpmfGoogleDrive-nojsmessage {
+    font-style: italic;
+}
+
+#WpmfGoogleDrive .noaccess {
+    text-align: center;
+    min-height: initial !important;
+}
+
+/* Container */
+.WpmfGoogleDrive {
+    border: 2px dashed transparent;
+}
+
+#WpmfGoogleDrive .list-container {
+    position: relative;
+    padding: 0;
+    z-index: 2;
+}
+
+#WpmfGoogleDrive .ajax-filelist {
+    font-size: 75%;
+    overflow: hidden;
+    padding: 10px 5px;
+    min-height: 190px;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    -ms-filter: 'alpha(opacity=100)';
+    background: #F9F9F9 center 65% no-repeat;
+}
+
+/* Loading Divs*/
+#WpmfGoogleDrive .loading {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    background: no-repeat 50% 30px;
+}
+
+#WpmfGoogleDrive .loading_google, #WpmfGoogleDrive .loading_onedrive {
+    background-image: url(../images/cloud_loading_128.gif);
+}
+
+#WpmfGoogleDrive .loading_dropbox {
+    background-image: url(../images/cloud_loading_128.gif);
+}
+
+/* Header */
+#WpmfGoogleDrive .nav-header {
+    min-height: 38px;
+    padding: 5px 15px;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    border-radius: 5px 5px 0 0
+}
+
+#WpmfGoogleDrive .nav-header a:hover,
+#WpmfGoogleDrive .column_names a:hover {
+    font-weight: bold;
+}
+
+#WpmfGoogleDrive .nav-title {
+    margin-left: 26px;
+    margin-right: 180px;
+    margin-top: 3px;
+    font-size: 14px;
+}
+
+/* Header buttons */
+#WpmfGoogleDrive .nav-home {
+    float: left;
+}
+
+#WpmfGoogleDrive .nav-home i {
+    font-size: 1.5em;
+    cursor: pointer;
+    line-height: 28px;
+}
+
+#WpmfGoogleDrive .nav-refresh i,
+#WpmfGoogleDrive .nav-search i,
+#WpmfGoogleDrive .nav-gear i {
+    margin-top: 3px;
+    font-size: 1.2em;
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+#WpmfGoogleDrive .nav-refresh,
+#WpmfGoogleDrive .nav-search,
+#WpmfGoogleDrive .nav-gear {
+    float: right;
+}
+
+#WpmfGoogleDrive .download-zip {
+    position: relative;
+    right: 0;
+    float: right;
+}
+
+#WpmfGoogleDrive .zip-status {
+    font-size: 80%;
+}
+
+#WpmfGoogleDrive .zip-status .zip-bytes {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* Files and folders*/
+#WpmfGoogleDrive .files .entry {
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    clear: both;
+    min-height: 35px;
+    line-height: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0 #D9D9D3;
+    -webkit-box-shadow: 0 0 8px 0 #D9D9D3;
+    -moz-box-shadow: 0 0 8px 0 #D9D9D3;
+}
+
+#WpmfGoogleDrive .files .file.selected {
+    border: #29ADE2 2px solid;
+}
+
+#WpmfGoogleDrive .files .column_names {
+    clear: both;
+    min-height: 30px;
+    padding: 5px 20px 5px 20px;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+}
+
+#WpmfGoogleDrive .uyd-grid .layout-grid {
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    /*    text-align: center;*/
+}
+
+#WpmfGoogleDrive .uyd-grid .entry {
+    padding: 5px 0;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    position: relative;
+    border-radius: 2px;
+    border: transparent 2px solid;
+    margin: 5px;
+    box-shadow: 0 0 8px 0 #D9D9D3;
+    -webkit-box-shadow: 0 0 8px 0 #D9D9D3;
+    -moz-box-shadow: 0 0 8px 0 #D9D9D3;
+}
+
+#WpmfGoogleDrive .entry:hover, #WpmfGoogleDrive .entry.hasfocus, #WpmfGoogleDrive .entry.isdragged, #WpmfGoogleDrive .entry.popupopen {
+    box-shadow: 2px 2px 4px #D9D9D3;
+    -webkit-box-shadow: 2px 2px 4px #D9D9D3;
+    -moz-box-shadow: 2px 2px 4px #D9D9D3;
+}
+
+#WpmfGoogleDrive .entry_edit {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 999;
+    display: none;
+}
+
+#WpmfGoogleDrive .wpmfaddonfile:hover > .entry_block .entry_edit, #WpmfGoogleDrive .wpmfaddonfile:hover > .entry_block .entry_checkfile {
+    display: block;
+}
+
+#WpmfGoogleDrive .entry_edit .wpmfaddonicon-edit, #WpmfGoogleDrive .entry_edit .wpmfaddonicon-delete, #WpmfGoogleDrive .entry_edit .wpmfaddonicon-download, .wpmf-home, .wpmfaddonicon-preview {
+    font-size: 15px;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry .entry_block {
+    padding: 5px;
+    width: 126px;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_thumbnail {
+    width: 100%;
+    height: 66px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid transparent;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_thumbnail-view-bottom {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_thumbnail-view-center {
+    text-align: center;
+    position: relative;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_thumbnail img {
+    max-width: 126px;
+    max-height: 64px;
+    padding: 1px;
+    vertical-align: top;
+    transition: opacity .3s ease-in;
+    -ms-interpolation-mode: bicubic;
+    box-shadow: none;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry.hasfocus .entry_link,
+#WpmfGoogleDrive .uyd-grid .entry.popupopen .entry_link,
+#WpmfGoogleDrive .uyd-grid .entry:hover .entry_link {
+    font-weight: bold;
+}
+
+#WpmfGoogleDrive .uyd-list .entry_name {
+    margin-left: 6px;
+    margin-right: 5px;
+    text-align: left;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_name {
+    line-height: 21px;
+    text-align: center;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_name .entry-name-view {
+    display: inline-block;
+    max-width: 78%;
+    padding-top: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_name .entry-name-view span,
+#WpmfGoogleDrive .uyd-grid .entry_name .entry-name-view span strong {
+    white-space: nowrap;
+}
+
+#WpmfGoogleDrive .entry_link {
+
+}
+
+#WpmfGoogleDrive .uyd-grid .entry_link {
+    display: inline;
+    width: 100%;
+    margin-top: 15px;
+    float: left;
+}
+
+.wpmfaddon-search-div {
+    float: right;
+}
+
+/* FileUpload Form */
+#WpmfGoogleDrive .fileuploadform {
+    font-size: 90%;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #E4E4E4;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    -ms-filter: 'alpha(opacity=100)';
+    background: #F9F9F9 center 65% no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .fileupload-list {
+    min-height: 170px;
+    padding: 10px;
+    position: relative;
+}
+
+#WpmfGoogleDrive div.fileupload-drag-drop {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+#WpmfGoogleDrive div.fileupload-drag-drop div {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    font-size: 160%;
+    font-weight: bold;
+    color: #BBB;
+}
+
+#WpmfGoogleDrive .fileupload-browse-button {
+    width: 100%;
+    height: 100%;
+    transform: none;
+}
+
+#WpmfGoogleDrive .fileupload-buttonbar {
+    text-align: center;
+    background-color: rgb(228, 228, 228);
+    padding: 7px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .fileupload-buttonbar-text {
+    line-height: 1.2;
+    margin-bottom: 10px;
+    top: 3px;
+    display: block;
+    position: relative;
+}
+
+#WpmfGoogleDrive .fileupload-buttonbar .ui-button {
+    float: none !important; /* overrule jQuery UI CSS */
+}
+
+#WpmfGoogleDrive .ui-button-text, #WpmfGoogleDrive .fileupload-browse-button {
+    cursor: pointer;
+}
+
+#WpmfGoogleDrive .upload-btn-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden
+}
+
+#WpmfGoogleDrive .upload-input-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 2em;
+    direction: ltr;
+    cursor: pointer;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    display: block;
+}
+
+#WpmfGoogleDrive .upload-thumbnail {
+    float: left;
+}
+
+#WpmfGoogleDrive .upload-thumbnail img {
+    width: 48px;
+    height: 48px;
+}
+
+#WpmfGoogleDrive .upload-file-info {
+    margin-left: 60px;
+    margin-top: 6px;
+    min-height: 48px;
+    position: relative;
+}
+
+#WpmfGoogleDrive .file-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#WpmfGoogleDrive .file-size {
+    font-size: 80%;
+    float: right;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+#WpmfGoogleDrive .max-file-size {
+    font-weight: bold;
+}
+
+#WpmfGoogleDrive .fileupload-info-container {
+    width: 100%;
+    font-size: 80%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+#WpmfGoogleDrive .upload-status-container {
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: bold;
+    margin-left: 15px;
+    float: right;
+}
+
+.upload-status {
+    margin: 5px;
+}
+
+.upload-status.uploading {
+    color: #428bca;
+}
+
+.upload-status.inqueue {
+    color: #f0ad4e;
+}
+
+.upload-status.succes {
+    color: #5cb85c;
+}
+
+.upload-status.error {
+    color: #d9534f;
+}
+
+#WpmfGoogleDrive .upload-error {
+    text-decoration: underline;
+    display: none;
+}
+
+#WpmfGoogleDrive .template-upload .ui-icon,
+#WpmfGoogleDrive .template-download .ui-icon {
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+#WpmfGoogleDrive .folder-thumb {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+/* Buttons*/
+#WpmfGoogleDrive .upload-btn {
+    margin: 0;
+    padding: 0 10px 1px;
+}
+
+#WpmfGoogleDrive .upload-btn.focus, #WpmfGoogleDrive .upload-btn:focus, #WpmfGoogleDrive .upload-btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+#WpmfGoogleDrive .upload-btn.active, #WpmfGoogleDrive .upload-btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+#WpmfGoogleDrive .upload-btn-primary.active,
+#WpmfGoogleDrive .upload-btn-primary.focus,
+#WpmfGoogleDrive .upload-btn-primary:active,
+#WpmfGoogleDrive .upload-btn-primary:focus,
+#WpmfGoogleDrive .upload-btn-primary:hover {
+    color: #fff;
+    background-color: #0e92c7;
+    border-color: #0D6487;
+}
+
+#WpmfGoogleDrive .fileupload-list .ui-icon {
+    float: right;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.adminfilebrowser #WpmfGoogleDrive .ajax-filelist {
+    font-size: 100%;
+}
+
+/*jQuery UI CSS overrule*/
+.Wpmfdialogaddfolder .ui-widget-content,
+.Wpmfdialogaddfolder .ui-dialog-titlebar {
+    padding: 5px !important;
+}
+
+.Wpmfdialogaddfolder .ui-dialog-titlebar-close {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+#WpmfGoogleDrive .fileupload-list .ui-icon {
+    float: right;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.ui-dialog.Wpmfdialogaddfolder .ui-dialog-titlebar-close {
+    float: right !important; /* overrule jQuery UI CSS */
+}
+
+.ui-front {
+    z-index: 1000; /* The default is 100. !important overrides the default. */
+}
+
+.ui-widget-overlay.ui-front {
+    z-index: 1000000 !important;
+}
+
+.Wpmfdialogaddfolder .ui-droppable.entry {
+    transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+}
+
+.Wpmfdialogaddfolder .ui-droppable.entry.ui-state-hover {
+    border: 0;
+    background: none;
+    opacity: 0.5;
+    -ms-filter: 'alpha(opacity=50)';
+}
+
+.Wpmfdialogaddfolder .ui-droppable.entry.ui-state-active {
+    border: 0;
+    background: none;
+    opacity: 0.9;
+    -ms-filter: 'alpha(opacity=90)';
+}
+
+span.dragNumber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3px 9px;
+    color: #ffffff;
+    border: 2px solid #888888;
+    background-color: #888888;
+    opacity: 0.8;
+    font-weight: bold;
+    font-size: 14px;
+    /*    border-radius : 20px;*/
+}
+
+.wpmfui-hoverClass {
+    border: #29ADE2 2px solid !important;
+}
+
+#WpmfGoogleDrive .template-row {
+    display: none;
+}
+
+.wpmfaddonsort.active, .wpmfaddoncheckall.active {
+    color: #29ADE2;
+}
+
+.entry_checkfile {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: none;
+}
+
+.wpmfifame {
+    z-index: 99999 !important;
+}
+
+.wpmfbutton-primary {
+    float: right;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 12px 2px;
+    background: #0085ba;
+    box-shadow: 0 1px 0 #006799;
+    color: #fff !important;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+    font-size: 13px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #006799;
+    border-top-color: #0073aa;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: none;
+}
+
+.wpmfmedia-button-insert {
+    margin-right: 5px;
+}
+
+.btnggimport, .btndbximport, .btnodvimport {
+    display: block;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.wpmf_ggbreadcrumb, .wpmf_dbxbreadcrumb, .wpmf_odvbreadcrumb {
+    padding: 5px !important;
+}
+
+.wpmf_ggbreadcrumb a:hover, .wpmf_dbxbreadcrumb a:hover, .wpmf_odvbreadcrumb a:hover {
+    color: #0073aa !important;
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 15px 15px 30px 0;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.wpmf-open-popup-media {
+    float: right;
+}
+
+.process_ggimport_full, .process_dbximport_full, .process_odvimport_full {
+    width: 300px;
+    float: left;
+    background: #ccc;
+    display: none;
+    margin-left: 10px;
+}
+
+.message_import {
+    float: left;
+    display: none;
+    margin-left: 10px;
+    color: #2895F1;
+}
+
+.process_btnimport {
+    float: left;
+    color: #fff;
+    background: #0085ba;
+    text-align: center;
+}
+
+#wrap-librarytree {
+    background: #FAFAFA;
+}
+
+#librarytree {
+    padding: 10px;
+    min-height: 98px;
+    max-height: 300px;
+    overflow: auto;
+    max-width: 100%;
+    margin: 10px 0 10px 10px;
+}
+
+.icon_file_upload, .wpmf_icon_folder, .wpmf_create_new_folder, .wpmf_skip_previous {
+    font-size: 50px !important;
+}
+
+.wpmf_icon_folder, .wpmf_create_new_folder, .wpmf_skip_previous {
+    color: #888888;
+    font-size: 50px;
+}
+
+.wpmfaddonfile:hover .wpmf_icon_folder, .entry.newfolder:hover .wpmf_create_new_folder, .wpmfaddonfile:hover .wpmf_skip_previous {
+    color: #fff;
+}
+
+.zmdi-chevron-right, .zmdi-chevron-left {
+    border: 0;
+}
+
+.upload-progress {
+    display: none;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.upload-progress .ui-progressbar-value {
+    height: 10px;
+    min-width: 20px;
+    width: 0;
+    background: #0073aa;
+    border-radius: 10px !important;
+    transition: width 300ms;
+}
+
+.onedrive_video .imgfile, .imgloading {
+    display: none;
+}
+
+.onedrive_video .imgloading {
+    display: block;
+    width: 100%;
+}
